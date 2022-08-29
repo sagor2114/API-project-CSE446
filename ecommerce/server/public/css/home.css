@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+body{
+	  
+    width: 100%;
+    background-repeat:no-repeat;
+    background-size:100% 1000px;
+	*background-position: center;*/
+}
+header{
+	background:#292c2f;
+	padding: 2px 0px 5px 40px;
+	height: 55px;
+
+}
+header h1{
+	display: inline;
+	font-family: 'Pacifico',sans-serif;
+	float: left;
+	font-size: 30px;
+	margin-top: 0px;
+	margin-right: 0px;
+	color: white;
+
+
+}
+#nav{
+	font-family: 'Bree Serif',sans-serif;
+}
+nav ul{
+	display: inline;
+	padding: 0px;
+	float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  color: white;
+  float: left;
+  font-family: 'Bree Serif',sans-serif;
+  margin: 10px;
+
+
+
+}
+nav ul li a{
+	text-decoration: none;
+	color: white;
+}
+.homered{
+	background-color: #00807359;
+	padding: 30px 10px 13px 10px;
+}
+
+.divider{
+	background-color: #008080;
+	height: 5px;
+}
+
+.homeblack:hover{
+	background-color:#00807359;
+	padding: 30px 10px 13px 10px;
+}
+.login_page{
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto;
+}
+
+.selection_page{
+	width: 360px;
+	padding:  10% 0 0;
+	margin: auto;
+}
+.about_page{
+	width: 360px;
+	padding:  10% 0 0;
+	margin: auto;
+}
+.post_items_page{
+	width: 360px;
+	padding:  10% 0 0;
+	margin: auto;
+}
+
+.form2{
+	position: relative;
+	z-index: 1;
+	background: white;
+	width: 270px;
+	height: 500px;
+	margin-top: 20px;
+	margin-left: 150px;
+	padding: 45px;
+  text-align: left;
+  display: inline-block;
+}
+.form3{
+	position: relative;
+	z-index: 1;
+	background: rgba(83, 86, 86, 0.26);
+	width: 400px;
+	height: 200px;
+	margin-top: 10px;
+  margin-left: 500px;
+  margin-bottom: 150px;
+	padding: 45px;
+  text-align: left;
+
+}
+.form2 p{
+   color: #fff;
+}
+
+.form2 input{
+	font-family: "Roboto",sans-serif;
+	outline: 1;
+	background: #f2f2f2;
+	width: 85%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+.form3 input{
+	font-family: "Roboto",sans-serif;
+	outline: 1;
+	background: #f2f2f2;
+	width: 75%;
+	border: 0;
+	margin: 0 40px 15px;
+	padding: 15px;
+	box-sizing: border-box;
+  font-size: 14px;
+  position:center;
+}
+
+#error_msg{
+  background: #FFB9B8 !important;
+  padding: 10px !important;
+  border-radius: 0 !important;
+  position: relative;
+  color: #FF0000;
+  display: inline-block !important;
+  box-shadow: 1px 1px 1px #aaaaaa;
+  margin-top: 10px;
+}
+
+.form2 button{
+	font-family: "Roboto",sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #149576;
+	width: 85%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form3 button{
+	font-family: "Roboto",sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #14953d;
+	width: 85%;
+	border: 0;
+	margin: 0 28px 15px;
+	padding: 25px;
+	color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form2 button:hover,.form button:active{
+	background: #43A047;
+}
+.form3 button:hover,.form button:active{
+	background: #43A047;
+}
+.form2 message{
+	margin: 15px 0 0;
+	color: aliceblue;
+	font-size: 12px;
+}
+
+.form2 .message a{
+	color: #3884e6;
+	text-decoration: none;
+}
+
+.form2 .register_form{
+	display: none;
+}
+div.gallery {
+  float: left;
+  width: 180px;
+}
+
+/*div.gallery:hover {
+  border: 1px solid #777;
+}*/
+
+/* div.gallery img {
+  width: 600px;
+  height: 600px;
+  padding-right: 50px;
+} */
+
+div.desc {
+    width: 85%;
+	color: rgb(14, 11, 11);
+	font: bold;
+	padding: 20px;
+}
+.gallery img{
+  width: 250px;
+  height: 200px;
+  padding-right: 100px;
+  transition: all .5s ease;
+
+
+}
+.gallery:hover img{
+  transform: scale(1.2);
+  transition: all .5s ease;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: white;
+}

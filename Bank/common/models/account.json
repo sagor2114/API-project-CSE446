@@ -1,0 +1,28 @@
+{
+  "name": "account",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ac_holder": {
+      "type": "string",
+      "required": true
+    },
+    "account_no": {
+      "type": "string"
+    },
+    "secret": {
+      "type": "string"
+    },
+    "balance": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+  }
+}

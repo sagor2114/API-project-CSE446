@@ -1,0 +1,36 @@
+{
+  "name": "Cart",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "userId": {
+      "type": "string",
+      "required": true
+    },
+    "txId": {
+      "type": "string",
+      "required": true
+    },
+    "areSupplied": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "products": {
+      "type": "embedsMany",
+      "model": "CartProd",
+      "property": "productList",
+      "options": {
+        "validate": false,
+        "forceId": false,
+        "disableInclude": true
+      }
+
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

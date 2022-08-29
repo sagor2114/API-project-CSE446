@@ -1,0 +1,20 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "transient": {
+    "name": "transient",
+    "connector": "transient"
+  },
+  "mongoDS": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb://localhost:27017/supplier",
+    "database": "supplier",
+    "password": "",
+    "name": "mongoDS",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

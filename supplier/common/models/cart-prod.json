@@ -1,0 +1,19 @@
+{
+  "name": "CartProd",
+  "base": "Model",
+  "idInjection": true,
+  "properties": {
+    "productId": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

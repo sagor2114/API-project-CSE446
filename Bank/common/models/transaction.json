@@ -1,0 +1,34 @@
+{
+  "name": "transaction",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "from_holder_name": {
+      "type": "string"
+    },
+    "from_ac_no": {
+      "type": "string"
+    },
+    "to_holder_name": {
+      "type": "string"
+    },
+    "to_ac_no": {
+      "type": "string"
+    },
+    "tx_amount": {
+      "type": "number"
+    },
+    "tx_date": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+
+  }
+}

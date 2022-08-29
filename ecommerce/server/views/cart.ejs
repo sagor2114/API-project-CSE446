@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HomePage</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+   <link href="/css/home.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?cs=srgb&dl=pexels-mike-b-120049.jpg&fm=jpg)">
+<header>
+   	<h1>CarBazar</h1>
+	<nav>
+
+		<ul id="nav">
+			<li> <a class = "homered" href="#">Home</a></li>
+			<li> <a class = "homeblack" href="/moveToCartPage">Cart</a></li>
+			<li> <a class="homeblack" href="/logout">Logout</a></li>
+		</ul>
+	</nav>
+</header>
+  <body>
+
+
+      <%
+      var cartSize = Object.keys(cartProducts).length;
+      var prodsSize = Object.keys(products).length;
+      for(let i=0; i<cartSize; i++) {
+            for(let j=0;j<prodsSize;j++){
+              if(cartProducts[i].productId == products[j].id){
+                var totalPrice = products[j].price*cartProducts[i].quantity
+      %>
+                <div class="form2">
+                    <form action="/removeFromCart" method="post">
+                              <div class="gallery">
+                              <img src="<%= products[j].url %>" alt="products[j].name" width="200px" height="150px" >
+                              <div class="desc">Name:<%=products[j].name%><br>Total Price:$<%=totalPrice %><br>Quantity: <%=cartProducts[i].quantity%></div>
+                              <input type="hidden" name="productId" value="<%= cartProducts[i].productId %>"  >
+                              <input type="hidden" name="price" value="<%= products[j].price %>"  >
+                              <input type="number" name="quantity" value="<%=cartProducts[i].quantity%>" min="1" max="<%=cartProducts[i].quantity%>" >
+
+                              <input type="submit" value="Remove From Cart" style="background:#d30e0e;color:white;">
+                              </div>
+                    </form>
+                </div>
+         <%   }
+            }
+       }
+     %>
+
+<div class="form3">
+   <p style="text-align:center;">Total cost: <%=cost%></p>
+   <form action="/placeOrder" method="post">
+   <input type="hidden" name="userId" value="<%= userId %>" >
+   <input type="hidden" name="t_cost" value="<%=cost%>" >
+   <button type="submit" style="background:rgb(255, 255, 255);color:rgb(239, 51, 9);">Place Order</button>
+   </form>
+   </div>
+   <footer>
+  </body>
+</html>

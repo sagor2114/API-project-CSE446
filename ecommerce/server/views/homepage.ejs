@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HomePage</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+   <link href="/css/home.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<!-- <body style="background-color: #eff5f5"> -->
+  <body style="background-image: url(https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?cs=srgb&dl=pexels-mike-b-120049.jpg&fm=jpg)">
+<header>
+   	<h1>CarBazaar</h1>
+	<nav>
+
+
+		<ul id="nav">
+			<li> <a class = "homered" href="#">Home</a></li>
+			<li> <a class = "homeblack" href="/moveToCartPage">Cart</a></li>
+			<li> <a class="homeblack" href="/logout">Logout</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+
+       <!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><i class="fa fa-exclamation-circle"></i>&nbsp;</h4>
+        </div>
+
+
+      <div class="login_page">
+        <div class="form">
+           <form class="login_form" method="post" action="/addAccountInfo">
+              <input type="hidden" name="userId" value="<%=userId%>" required >
+              <input type="text" name="ac_holder" placeholder="ac holder name" required >
+              <input type="text" name="ac_no" placeholder="account no" required >
+              <!-- <input type="text" name="phn" placeholder="phone no" required > -->
+              <input type="password" name="secret" placeholder="secret" required>
+
+              <button type="submit"  class="btn" >SUBMIT</button>
+           </form>
+
+       </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+
+    <!--add to cart-->
+
+
+     <%
+     var CntItem = Object.keys(products).length;
+     for(let i=0; i<CntItem; i++) {
+      %>
+             <div class="form2">
+             <form action="/addToCart" method="post">
+              <div class="gallery">
+               <img src="<%= products[i].url %>" alt="products[i].name">
+              <div class="desc">Name: <%= products[i].name%><br>Price: $<%= products[i].price%></div>
+
+              <input type="hidden" name="productId" value="<%= products[i].id %>" >
+              <input type="number" name="quantity" min="0" value="0" >
+              <input type="submit" value="ADD TO CART" style="background:#161495;color:white;">
+              </div>
+
+</form>
+</div>
+    <% }%>
+
+
+
+<!-- auto pop up load after signUp -->
+  <% if (isSignup == true){ %>
+  <script>
+   $(window).on('load',function(){
+  $('#myModal').modal('show');
+})
+</script>
+<% } %>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OrderTracking</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+   <link href="/css/home.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color: #eff5f5">
+<header>
+   	<h1>CarBazar</h1>
+	<nav>
+
+		<ul id="nav">
+			<li> <a class = "homered" href="#">Home</a></li>
+			<li> <a class = "homeblack" href="/moveToCartPage">Cart</a></li>
+			<li> <a class="homeblack" href="/logout">Logout</a></li>
+		</ul>
+	</nav>
+</header>
+
+             <div class="form3">
+             <form>
+              <div class="gallery">
+              <%
+              for(let i=0;i<track.length;i++){
+                %>
+                <div style="height:90px;">
+                  <span><%=track[i]%></span>
+                </div>
+
+                <%
+              }
+
+              %>
+
+              </div>
+
+</form>
+</div>
+</body>
+</html>
+
+
+
